@@ -1,0 +1,336 @@
+a {
+    text-decoration: none !important;
+}
+
+#header {
+    background-image: url(images/header.png);
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    z-index: 999;
+    position: relative;
+}
+
+/* #logo {
+    height: 150px;
+     margin-top: 50px; 
+    text-align: center;
+} */
+
+main {
+    z-index: 1;
+    margin-top: -50px;
+}
+
+.nav {
+    justify-content: center;
+}
+
+.tituloEmpanada {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.detalleEmpanada {
+    font-size: 1rem;
+    font-weight: 400;
+    color: grey;
+    margin-bottom: 0.5rem;
+}
+
+.fondoEmpanadas {
+    background-image: url(images/fondo-empanadas2.png);
+    width: 100%;
+    background-size: cover;
+
+}
+
+#escribinos {
+    background-color: #c51718;
+}
+
+.escribinos {
+    color: #c51718 !important;
+}
+
+.escribinos a:hover {
+    color: orange !important;
+}
+
+*/ .tituloDireccion {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.mapa {
+    width: 100% !important;
+    height: 600px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 3rem;
+    font-family: 'Norican', cursive;
+    font-weight: 600;
+}
+
+#slider h1,
+#slider h2,
+#slider h3 {
+    text-shadow: 2px 2px 5px black;
+}
+
+.separador {
+    width: 100%;
+}
+
+.contenedorContacto {
+    width: 70%;
+    background-image: url(images/fondo-naranja.png);
+    background-size: contain;
+    border-radius: 10px 10px 50% 50%;
+    border: solid 3px black
+}
+
+.fondoMenu {
+    background-color: white;
+    border-radius: 10px 10px 40px 40px;
+}
+
+footer {
+    background-image: url(images/footer.png);
+    height: 600px;
+    width: 100%;
+}
+
+footer .titulo {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: 'Norican', cursive;
+}
+
+footer .textofooter {
+    color: white;
+    font-size: 0.8rem;
+}
+
+/* .imagenSlider {
+    width: 60%;
+    height: auto;
+} */
+
+.centrarImagen {
+    height: 100%;
+    display: flex !important;
+    justify-content: center;
+}
+
+.carousel-item>div {
+    height: 100%;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.anaranjado {
+    text-shadow: 2px 2px orange;
+}
+
+.textHeaderTop,
+.textHeaderTop a {
+    color: white;
+    font-weight: 700;
+}
+
+.textHeaderTop a:hover {
+    color: #25d366;
+}
+
+#slider a {
+    color: white;
+    font-weight: 700;
+    z-index: 999;
+}
+
+
+footer a {
+    color: white;
+    font-weight: 700;
+}
+
+footer a:hover {
+    color: orange;
+}
+
+.vh100 {
+    height: 100vh;
+
+}
+
+.copy p {
+    color: white;
+}
+
+.textoGrande {
+    font-size: 6rem;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.altura {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.carrito {
+    background-color: red;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.d-flex {
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.icono {
+    font-size: 50px;
+    color: white;
+    flex-direction: column;
+}
+
+.catalogo-expandido {
+    width: 90%;
+    padding: 0;
+}
+.catalogo-contraido {
+    width: 50%;
+    padding: 0 60px;
+}
+.carrito-contraido {
+    width: 10%;
+}
+.carrito-expandido {
+    width: 50%;
+    margin-left: 15px;
+}
+
+.table {
+    color: yellow;
+}
+
+#checkout .table {
+    color: red !important;
+}
+
+.table tbody {
+    color: white;
+}
+
+#checkout .table tbody {
+    color:black;
+}
+
+.btn-white{
+    background-color: white;
+    color:black;
+    font-weight: 700;
+}
+
+#cantidadPrevia {
+    font-size: 1rem;
+font-weight: 700;
+background-color: yellow;
+color: red;
+padding: 5px 10px;
+border-radius: 26px;
+margin-bottom: 10px;
+}
+
+@media (max-width: 990px) {
+    #header {
+        background-image: url(images/header800.png);
+        height: 200px;
+        background-position: bottom;
+    }
+
+    .telefonoweb {
+        display: none;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .contenedorContacto {
+        width: 100%;
+        border-radius: 10px 10px 20% 20%;
+    }
+
+    #logo {
+        width: 90%;
+    }   
+    
+    .textoGrande {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 550px) {
+
+    main {
+        margin-top: -70px;
+    }
+
+    #logo {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    footer #logo {
+        width: 46%;
+        margin-top: 10px;
+    }
+
+    #header {
+        height: 170px;
+        background-position: bottom;
+    }
+
+}
+
+@media (max-width: 361px) {
+    #logo {
+        width: 70%;
+    }
+
+    .vh100 {
+        height: 90vh;
+    }
+}
+
+

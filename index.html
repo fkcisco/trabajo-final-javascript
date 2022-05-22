@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lagauchitarota.es</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Norican:regular" rel="stylesheet" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</head>
+
+<body>    
+
+    <header id="header">
+        <div class="headerTop py-3">
+            <div class="container">
+                
+            </div>
+        </div>
+        
+
+    </header>
+    <main>
+        
+        <!-- <div id="carrito">
+            <h1 class="mt-5 text-center">Carrito de compras</h1>
+            <div>
+                <ul id="listadoCarrito"></ul>
+            </div>
+            <div class="container">
+                <div class="row mx-2">
+                    <div class="col btn btn-dark" id="totalCarrito">Total $: 0.00</div>
+                    <a href="checkout.html" class="col btn btn-dark">Realizar Pedido</a>
+                </div>
+            </div>
+        </div> -->
+
+        <section class="py-5">            
+            <div id="contenedorCheck" class="container">                
+
+                <div id="catalogoColumna" class="catalogo-expandido">
+                    <h3 class="text-center py-5 anaranjado">Empanadas Argentinas</h3>
+                    <div id="catalogoEmpanadas" class="row row-eq-height row-cols-1 row-cols-sm-2 row-cols-md-6 g-6"></div>
+                    <h3 class="text-center py-5 anaranjado">Postres Argentinos</h3>
+                    <div id="catalogoPostres" class="row row-eq-height row-cols-1 row-cols-sm-2 row-cols-md-4 g-4"></div>
+                    <h3 class="text-center py-5 anaranjado">Salsas Argentinos</h3>
+                    <div id="catalogoSalsas" class="row row-eq-height row-cols-1 row-cols-sm-2 row-cols-md-6 g-6"></div>
+                </div>
+
+                <div id="carritoColumna" class="carrito-contraido carrito">
+                    <div id="detalleSimplificado" class="icono d-flex">
+                        <i class="bi bi-bag-plus-fill d-block"></i>
+                        <div id="cantidadPrevia">()</div>
+                        <button id="verDetalle" class="btn btn-danger">Ver Pedido</button>
+                    </div>
+                    <div id="detalleCarrito" class="detalle d-none">
+                        <h1 class="mt-5 text-center">Carrito de compras</h1>                        
+
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">$ Unidad</th>
+                                <th scope="col">$</th>
+                              </tr>
+                            </thead>
+                            <tbody id="listadoCarrito">
+                             
+                            </tbody>
+                          </table>
+                        <div class="container">
+                            <div class="row mx-1">
+                                <div class="col btn btn-white" id="totalCarrito"> Total $: 0.00</div>
+                            </div>
+                            <div class="row mx-2 mt-2">                                
+                                <button id="ocultarDetalle" class="col btn btn-danger">Contraer Carrito</button>
+                                <a href="checkout.html" class="col btn btn-dark">Realizar Pedido</a>
+                                <button id="vaciarCarrito" class="col btn btn-secondary">Vaciar Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+          
+
+    </main>
+
+    <footer>
+        <div class="container" style=" height:100%">
+
+            <div class="row align-items-center text-center" style=" height:100%">
+                <div class="col-12 col-lg-6">
+                    <img id="logo" class="justify-content-center img-fluid" src="images/logo.webp" alt="Logo La Gauchita Rota">
+                    <p class="titulo">Sabores que hacen Viajar.</p>
+                    <p class="textofooter">Empanadas Argentinas | Españolas</p>
+
+                </div>
+                <div class="col-12 col-lg-6">
+                    <p class="titulo">Local Comercial</p>
+                    <p class="textofooter">Velazquez 11.520 | Local 2 | Rota | España </p>
+                    <p class="textofooter"><a
+                            href="https://api.whatsapp.com/send?phone=+34623219134&text=hola,%20escribo%20para%20realizar%20un%20pedido%20de%20empanadas%20..."
+                            target="_black">WhatsApp +34 62 32 19 134 </a></p>
+                    <p class="titulo">Redes Sociales</p>
+                    <p class="textofooter"> <a href="https://www.instagram.com/Lagauchitarota.es/" target="_blank"><i
+                                class="bi bi-instagram"></i> Instagram</a></p>
+                    <p class="textofooter"> <a href="https://www.facebook.com/Lagauchitarotaes-101643162481829"
+                            target="_blank"><i class="bi bi-facebook"></i> Facebook</a></p>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="container-fluid py-5" style="background-color: black;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copy py-3">
+                            <p class="text-center">LaGauchita.es Rota | Todos los derechos reservados <br> <a
+                                    href="https://madryn-ads.com.ar/desarrollo-web" target="_blank">Desarrollo Web</a>
+                                con amor por <a href="https://madryn-ads.com.ar" target="_blank">Mads Comunicación
+                                    360</a> para <a href="https://www.facebook.com/Cactusagenciacreativa"
+                                    target="_blank">Cactus Agencia Creativa</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <script src="js/variables.js" async></script>
+        <script src="js/catalogo.js" async></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+        </script>
+        <script src="js/wow.js"></script>
+        
+
+
+
+    </footer>
+
+</body>
+
+</html>
