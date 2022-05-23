@@ -46,13 +46,21 @@ botonEditar.onclick = () => {
 
  botonwhatapps.onclick = () => {
     const urlDesktop = 'https://web.whatsapp.com/';
-    const telefono = '+5492804011235'; 
+    const telefono = '+5492804011235';
     
-    for (const carritoMensaje of carritoCheckout) {   
-    }
+    let pedidoswhatapps;
+
+    for (const carritoMensaje of carritoCheckout) {
+       pedidoswhatapps = "Cantidad: " + carritoMensaje.cantidad + " Producto: " + carritoMensaje.nombre + " | %0A";
+     }     
+ 
+ 
+    pedidoswhatapps += pedidoswhatapps;
+    console.log("whatapps")
+    console.log(pedidoswhatapps);
 
 
-    let mensaje = 'send?phone=' + telefono + '&text=Hola escribo para realizar el siguiente pedido %0A Pedido 1:' + '';
+    let mensaje = 'send?phone=' + telefono + '&text=Hola escribo para realizar el siguiente pedido:%0A' + pedidoswhatapps + '';
     window.open(urlDesktop + mensaje, '_blank'); 
 
  };

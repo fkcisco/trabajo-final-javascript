@@ -1,8 +1,6 @@
 const productosCatalogo = [];
 
-const carritoPedido = [];
-
-let editar = JSON.parse(localStorage.getItem("carritoEditado"));
+let carritoPedido = [];
 
 const divEmpanadas = document.getElementById("catalogoEmpanadas");
 const divPostres = document.getElementById("catalogoPostres");

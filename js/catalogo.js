@@ -11,6 +11,7 @@ class Catalogo {
 
 }
 
+
 fetch("empanadas.json")
     .then((res) => res.json())
     .then((data) => {
@@ -92,6 +93,10 @@ function restarbotones() {
 }
 
 
+
+
+
+
 function mostrarProducto(idproducto) {
     const agregarCarrito = productosCatalogo.find((item) => item.id === idproducto);
     Swal.fire({
@@ -135,6 +140,32 @@ function mostrarProducto(idproducto) {
 function redondear(num) {
     let m = Number((Math.abs(num) * 100).toPrecision(15));
     carritoRedondeado = Math.round(m) / 100 * Math.sign(num);
+}
+
+
+
+let editarsiexiste =  JSON.parse(localStorage.getItem("carritoEditado"));
+const sieditar =  JSON.parse(localStorage.getItem("editarCarrito"));
+
+if(editarsiexiste == true) {
+    Swal.fire({
+        title: 'Carrito sin Procesar',
+        html: '<p> Tenes productos sin procesar en le carrito <p>',
+        confirmButtonText: 'Seguir mi pedido'
+    }).then((result) => {        
+        if (result.isConfirmed) {                    
+            carritoPedido = sieditar;
+            enlistarCarrito();
+            actualizarPrecioFinal();
+            let editar = false;
+            let borarr = [];
+            localStorage.setItem("carritoEditado", JSON.stringify(editar));
+            localStorage.setItem("editarCarrito", JSON.stringify(borarr));
+
+        }
+    })
+    
+
 }
 
 
