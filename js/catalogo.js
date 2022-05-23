@@ -100,10 +100,24 @@ function mostrarProducto(idproducto) {
         imageUrl: "images/empanadas/" + agregarCarrito.img,
         confirmButtonText: 'Agregar Empanadas'
     }).then((result) => {
+        let existe;
         if (result.isConfirmed) {
             let cantidadProducto = document.getElementById("cantidad").value;
-            if(cantidadProducto > 0 ) {
-            agregarCarrito['cantidad'] = cantidadProducto;
+            existe = carritoPedido.find((item) => item.id === idproducto);          
+            if(cantidadProducto <= 0) {
+                Swal.fire(
+                'No se Agrego al Carrito',
+                'La cantidad no puede estar vacia ni ser un número negativo',
+                'warning'
+                )
+            } else if(existe != null) {
+                Swal.fire(
+                    'El producto ya esta en el carrito',
+                    'Podes sumar la cantidad desde el listado del carrito, haciendo clic en el boton "Ver Listado"',
+                    'warning'
+                )
+            } else {
+                agregarCarrito['cantidad'] = cantidadProducto;
             carritoPedido.push(agregarCarrito);
             enlistarCarrito();
             console.log(carritoPedido);            
@@ -112,12 +126,6 @@ function mostrarProducto(idproducto) {
                 'Agregaste correctamente ' + agregarCarrito.cantidad + ' ' + agregarCarrito.nombre,
                 'success'
             )
-            } else {
-                Swal.fire(
-                    'No se Agrego al Carrito',
-                    'La cantidad no puede estar vacia ni ser un número negativo',
-                    'warning'
-                )
             }
         }
     })
@@ -131,22 +139,23 @@ function redondear(num) {
 
 
 function enlistarCarrito() { 
-   listadoCarrito.innerHTML = ` `;  
+   listadoCarrito.innerHTML = ` `; 
+   
    
    for (const elementos of carritoPedido) {
         let verListado = document.createElement("tr");
-        cantidadCarrito = parseFloat(elementos.cantidad);
-
-       
+        cantidadCarrito = parseFloat(elementos.cantidad);       
         let carrito = parseFloat(elementos.precio * cantidadCarrito);
         redondear(carrito);      
         
         verListado.innerHTML = `<td><button class="agregarCantidad btn btn-danger btn-sm mx-2" value="${elementos.id}">+</button>${cantidadCarrito} <button class="restarCantidad btn btn-success btn-sm mx-2" value="${elementos.id}">-</button></td><td> ${elementos.nombre} </td><td> $ ${elementos.precio}</td><td> $ ${carritoRedondeado} <button class="eliminarDelCarrito btn btn-danger btn-sm mx-2" value="${elementos.id}">x</button></td>`;
         listadoCarrito.append(verListado);
         localStorage.setItem("CarritoEmpanadas", JSON.stringify(carritoPedido));     
-} 
-    
+    } 
+   
+  
     totalcantidadcarrito += parseFloat(cantidadCarrito);
+    
     
     cantidadPrevia.innerHTML = ``;
     verCantidadPrevia = document.createElement("span");

@@ -46,7 +46,12 @@ botonEditar.onclick = () => {
 
  botonwhatapps.onclick = () => {
     const urlDesktop = 'https://web.whatsapp.com/';
-    const telefono = '+5492804011235';  
+    const telefono = '+5492804011235'; 
+    
+    for (const carritoMensaje of carritoCheckout) {   
+    }
+
+
     let mensaje = 'send?phone=' + telefono + '&text=Hola escribo para realizar el siguiente pedido %0A Pedido 1:' + '';
     window.open(urlDesktop + mensaje, '_blank'); 
 
@@ -54,4 +59,3 @@ botonEditar.onclick = () => {
 
 
 enlistarProductosCheckout();
-
